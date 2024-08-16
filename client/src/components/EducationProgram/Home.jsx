@@ -25,7 +25,7 @@ export default function Home() {
         </a>
       </div>
       <div>
-        <a href="/education-program/skills">
+        <a href="/education-program/skill">
           <button>Skill Development</button>
         </a>
       </div>
