@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 
-export default function SkilldevForm() {
+export default function HostelForm() {
   const [data, setData] = useState({});
   function handleSubmit(e) {
     e.preventDefault();
@@ -11,31 +11,30 @@ export default function SkilldevForm() {
     const budget = e.target.budget.value;
     console.log(title, address, budget);
     axios
-      .post("http://localhost:5000/education/skill", {
+      .post("http://localhost:5000/education/hostel", {
         title,
         address,
         budget,
       })
       .then((res) => {
         setData(res.data);
-        window.location.href = "/education-program/skill/add";
+        window.location.href = "/education-program/hostel/add";
       });
   }
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
-      <div>
+    <div>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="title">Title</label>
         <input type="text" name="title" id="title" required />
-      </div>
-      <div>
+        <br />
         <label htmlFor="address">Address</label>
         <input type="text" name="address" id="address" required />
-      </div>
-      <div>
+        <br />
         <label htmlFor="budget">Budget</label>
         <input type="number" name="budget" id="budget" required />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 }

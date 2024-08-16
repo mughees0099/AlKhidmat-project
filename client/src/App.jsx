@@ -8,6 +8,10 @@ import Skilldev from "./components/EducationProgram/SkillDevlopment/SkillDevData
 import Hostels from "./components/EducationProgram/Hostels/Hostels.jsx";
 import Schools from "./components/EducationProgram/Schools/Schools.jsx";
 import SkilldevForm from "./components/EducationProgram/SkillDevlopment/SkilldevForm.jsx";
+import SchoolForm from "./components/EducationProgram/Schools/SchoolForm.jsx";
+import ScholarshipForm from "./components/EducationProgram/ScholarShips/ScholarshipForm.jsx";
+import HostelForm from "./components/EducationProgram/Hostels/HostelForm.jsx";
+import ChildProtectionForm from "./components/EducationProgram/ChildProtection/ChildProtectionForm.jsx";
 
 function App() {
   return (
@@ -30,6 +34,22 @@ function App() {
           <Route
             path="/education-program/skill/add"
             element={<SkilldevForm />}
+          />
+          <Route
+            path="/education-program/schools/add"
+            element={<SchoolForm />}
+          />
+          <Route
+            path="/education-program/hostel/add"
+            element={<HostelForm />}
+          />
+          <Route
+            path="/education-program/scholarship/add"
+            element={<ScholarshipForm />}
+          />
+          <Route
+            path="/education-program/child-protection/add"
+            element={<ChildProtectionForm />}
           />
 
           <Route path="*" element={<div>404</div>} />
