@@ -1,12 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
-import React from "react";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/EducationProgram/Home.jsx";
 import ChildProtection from "./components/EducationProgram/ChildProtection/ChildProtection.jsx";
 import Scholarship from "./components/EducationProgram/ScholarShips/Scholarship.jsx";
 import Skilldev from "./components/EducationProgram/SkillDevlopment/Skilldev.jsx";
 import Hostels from "./components/EducationProgram/Hostels/Hostels.jsx";
+import Schools from "./components/EducationProgram/Schools/Schools.jsx";
 
 function App() {
   return (
@@ -19,12 +19,9 @@ function App() {
             path="/education-program/child-protection"
             element={<ChildProtection />}
           />
-          <Route
-            path="/education-program/scholarships"
-            element={<Scholarship />}
-          />
-          <Route path="/education-program/skills" element={<Skilldev />} />
 
+          <Route path="/education-program/skills" element={<Skilldev />} />
+          <Route path="/education-program/schools" element={<Schools />} />
           <Route
             path="/education-program/scholarships"
             element={<Scholarship />}
